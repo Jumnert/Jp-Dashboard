@@ -73,6 +73,7 @@ fun SpecialOfferCard(modifier: Modifier = Modifier, imgPlaceholder: Int, title: 
 @Composable
 fun offercardcarousel(modifier: Modifier = Modifier) {
     LazyRow(
+        modifier = Modifier.padding(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         item {

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -36,7 +37,10 @@ android {
 }
 
 dependencies {
+    implementation("dev.chrisbanes.haze:haze:1.6.5")
     implementation("com.airbnb.android:lottie-compose:6.7.1")
+    implementation(libs.androidx.compose.foundation.layout)
+    implementation(libs.androidx.material3)
     implementation(libs.coil.compose)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
@@ -57,4 +61,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.kotlinx.serialization.json)
 }
